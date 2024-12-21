@@ -1,23 +1,14 @@
 {
-  "name": "project-happy-thoughts-api",
+  "name": "happy-thoughts",
   "version": "1.0.0",
-  "description": "Starter project to get up and running with express quickly",
+  "main": "index.js",
   "scripts": {
-    "start": "babel-node server.js",
-    "dev": "nodemon server.js --exec babel-node"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.17.3",
-    "mongoose": "^8.0.0",
-    "nodemon": "^3.0.1"
-  },
-  "devDependencies": {
-    "@babel/node": "^7.26.0"
+    "dotenv": "^16.0.3"
   }
 }
