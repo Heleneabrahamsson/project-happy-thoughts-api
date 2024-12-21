@@ -8,7 +8,7 @@ const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/happyThoughts"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 8080
 const app = express()
 
 app.use(cors())
@@ -107,6 +107,6 @@ app.post("/thoughts/:thoughtId/like", async (req, res) => {
   }
 })
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`)
-})
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
+});
