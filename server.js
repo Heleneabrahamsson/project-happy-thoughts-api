@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/happyThoughts"
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoUrl)
 mongoose.Promise = Promise
 
 const port = process.env.PORT || 8080;
